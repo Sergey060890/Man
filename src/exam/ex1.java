@@ -38,29 +38,20 @@ public class ex1 {
                 + minutes1 + " " + declension(minutes1, "Minutes") + " " + seconds1 + " " +
                 declension(seconds1, "Seconds"));
     } public static String declension ( long count, String type){
-        String one = "";
-        String two = "";
-        String five = "";
+        String[] declension = new String[3];
+        declension[0] = "";
+        declension[1] = "";
+        declension[2] = "";
         if (type.equals("Week")) {
-            one = "неделя";
-            two = "недели";
-            five = "недель";
+            declension = new String[]{"неделя","недели","недель"};
         } else if (type.equals("Days")) {
-            one = "день";
-            two = "дня";
-            five = "дней";
+            declension = new String[]{"день","дня","дней"};
         } else if (type.equals("Hour")) {
-            one = "час";
-            two = "часа";
-            five = "часов";
+            declension = new String[]{"час","часа","часов"};
         } else if (type.equals("Minutes")) {
-            one = "минута";
-            two = "минуты";
-            five = "минут";
+            declension = new String[]{"минута","минуты","минут"};
         } else if (type.equals("Seconds")) {
-            one = "секунда";
-            two = "секунды";
-            five = "секунд";
+            declension = new String[]{"секунда","секунды","секунд"};
         }
         if (count > 100)
             count %= 100;
@@ -68,15 +59,15 @@ public class ex1 {
             count %= 10;
         if (count==1)
         {
-            return one;
+            return declension[0];
         }
         else if(count==2||count==3||count==4)
         {
-            return two;
+            return declension[1];
         }
         else
         {
-            return five;
+            return declension[2];
         }
     }
 }
