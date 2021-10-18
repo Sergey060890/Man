@@ -14,7 +14,8 @@ public class cr1 {
         double value = a;
         double value1 = b;
         double value2 = r;
-        if ((r * 3.14 * 2) >= (2 * (a + b))) {
+        if ((r * 2) >= (Math.sqrt((a*a)+(b*b))))
+        {
             System.out.println("Картонка с радиусом " + (dF.format(value2)) + " закрывает полностью отверстие размером " +
                     (dF.format(value)) + " на " + (dF.format(value1)));
         } else {
