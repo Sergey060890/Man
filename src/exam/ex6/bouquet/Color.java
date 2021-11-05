@@ -1,4 +1,4 @@
-package exam.ex6.Bouquet;
+package exam.ex6.bouquet;
 public enum Color {
     Red,
     Yellow,

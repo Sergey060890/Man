@@ -1,4 +1,4 @@
-package exam.ex6.Bouquet;
+package exam.ex6.bouquet;
 public class Rouse extends Flower{
     private final static String name = "Роза";
     private final static int life = 7;

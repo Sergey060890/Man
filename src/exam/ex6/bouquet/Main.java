@@ -1,4 +1,5 @@
-package exam.ex6.Bouquet;
+package exam.ex6.bouquet;
+
 public class Main {
     public static void main(String[] args) {
         Rouse ros1 = new Rouse(6.5, Color.Red); //Создание объектов цветов типа "Роза"
@@ -29,6 +30,7 @@ public class Main {
         System.out.println("Букет завянет через " + bouquet.getMaxLife() + " " +
                 declension(bouquet.getMaxLife(), "Days"));
     }
+
     public static String declension(double count, String type) { //Проверка на окончания
         String[] declension = new String[3];
         declension[0] = "";
@@ -43,9 +45,9 @@ public class Main {
             count %= 100;
         if (count > 20)
             count %= 10;
-        if (count == 1.5||count == 1.0) {
+        if (count == 1.5 || count == 1.0) {
             return declension[0];
-        } else if (count == 2.5 || count == 3.5 || count == 4.5||count==2.0||count==3.0||count==4.0) {
+        } else if (count == 2.5 || count == 3.5 || count == 4.5 || count == 2.0 || count == 3.0 || count == 4.0) {
             return declension[1];
         } else {
             return declension[2];
