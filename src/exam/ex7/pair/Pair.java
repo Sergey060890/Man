@@ -1,37 +1,40 @@
 package exam.ex7.pair;
-public class Pair<T> {
-    private T name;
-    private T age;
+class Pair<T, S> {
+    private T first;
+    private S last;
 
-    public Pair(T firstElement, T lastElement) {
-        name = firstElement;
-        age = lastElement;
-    }
-
-    public T getFirst() {
-        return name;
-    }
-
-    public T getLast() {
-        return age;
+    public Pair(T firstElement, S lastElement) {
+        first = firstElement;
+        last = lastElement;
     }
 
     public void swap() {
-        T temp = name;
-        name = age;
-        age = temp;
+        T temp = first;
+        first = (T) last;
+        last = (S) temp;
     }
 
     public String toString() {
-        return "" + name + " " + age + "";
+        return "" + first + ", " + last + "";
     }
 
-    public <T> Pair<T> replaceFirst(T newName) {
-        return new Pair(newName, name);
+    public T getFirst() {
+        return first;
     }
 
-    public <T> Pair<T> replaceLast(T newAge) {
-        return new Pair(age, newAge);
+    public S getLast() {
+        return last;
+    }
+
+    public <T, S> Pair<T, S> replaceFirst(T newLast) {
+        return new Pair(newLast, first);
+    }
+
+    public <T, S> Pair<T, S> replaceLast(T newFirst) {
+        return new Pair(last, newFirst);
     }
 }
+
+
+
 
