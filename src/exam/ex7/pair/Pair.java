@@ -1,4 +1,5 @@
 package exam.ex7.pair;
+
 class Pair<T, S> {
     private T first;
     private S last;
@@ -8,14 +9,12 @@ class Pair<T, S> {
         last = lastElement;
     }
 
-    public void swap() {
-        T temp = first;
-        first = (T) last;
-        last = (S) temp;
-    }
-
     public String toString() {
         return "" + first + ", " + last + "";
+    }
+
+    public Pair<T, S> swap() {
+        return new Pair(last, first);
     }
 
     public T getFirst() {
@@ -26,12 +25,12 @@ class Pair<T, S> {
         return last;
     }
 
-    public <T, S> Pair<T, S> replaceFirst(T newLast) {
-        return new Pair(newLast, first);
+    public <G>Pair<T, S> replaceFirst(G newFirst) {
+        return new Pair(newFirst, last);
     }
 
-    public <T, S> Pair<T, S> replaceLast(T newFirst) {
-        return new Pair(last, newFirst);
+    public <F>Pair<T, S> replaceLast(F newLast) {
+        return new Pair(first, newLast);
     }
 }
 
