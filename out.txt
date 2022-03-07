@@ -1,1 +1,10 @@
-1668 1845 2574 3463 4869 6975 15813 22258 30271 37965 45294 62727 69493 71382 72484 74701 76130 86158 86337 98786 
+Borovoy	Pavel	38	Molodechno 
+Ivanov	Ivan	28	Minsk 
+Ivanov	Mark	24	Mogilev 
+Minskiy	Dmitriy	24	Gomel 
+Petrov	Sergey	26	Borisov 
+Petrov	Sergey	31	Brest 
+Sergeev	Petr	23	Vitebsk 
+Smirnov	Nikolai	27	Baranovichi 
+Sych	Viktor	35	Brest 
+Zverev	Egor	20	Gomel 
